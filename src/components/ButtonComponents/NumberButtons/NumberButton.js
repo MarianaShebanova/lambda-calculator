@@ -1,9 +1,36 @@
 import React from "react";
 
-const NumberButton = () => {
+function calc(props) {
+  console.log(props.dataOp);
+   if (props.dataOp === '-') {
+     props.setDataA(props.dataA - props.number);
+     props.setDataOp(0);
+   }
+  if (props.dataOp === '+') {
+    props.setDataA(props.dataA + props.number);
+    props.setDataOp(0);
+  }
+  if (props.dataOp === 'x') {
+    props.setDataA(props.dataA * props.number);
+    props.setDataOp(0);
+  }
+  if (props.dataOp === '/') {
+    props.setDataA(props.dataA / props.number);
+    props.setDataOp(0);
+  }
+  if (props.dataOp == 0) {
+    props.setDataA(props.number);
+  }
+}
+
+const NumberButton = (props) => {
   return (
-    <>
-      {/* Display a button element rendering the data being passed down from the parent container on props */}
-    </>
+    <button className="button" onClick={() =>  
+      calc(props)
+    }>
+        {props.number}
+    </button>
   );
 };
+
+export default NumberButton;
