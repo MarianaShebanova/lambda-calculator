@@ -20,3 +20,29 @@
     padding-right: 8%;
     font-size: 5.0rem;
   }
+.button_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.button {
+  background: #3390F6;
+  width: 25%;
+  color: white;
+  margin: 0.2rem;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 50%;
+}
+.operation-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.operator {
+  background: #063161;
+  width: 70%;
+}
+.special {
+  background: #063161;
+}

@@ -1,9 +1,20 @@
 import React from "react";
+function calc(props) {
+  if (props.special === 'C') {
+    props.setDataA(0);
+  }
+  if (props.special === "+/-") {
+    props.setDataA(- props.dataA);
+  }
+}
 
-const SpecialButton = () => {
+const SpecialButton = (props) => {
   return (
-    <>
-      {/* Display a button element rendering the data being passed down from the parent container on props */}
-    </>
+    <button className="button special" onClick={() =>
+      calc(props)
+    }>
+      {props.special}
+    </button>
   );
 };
+export default SpecialButton;
